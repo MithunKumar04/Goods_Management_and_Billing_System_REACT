@@ -169,7 +169,7 @@ const AddGoods = () => {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:3000/api/goods', product);
+      await axios.post('https://goods-management-and-billing-system.onrender.com/api/goods', product);
 
       await new Promise(resolve => setTimeout(resolve, 1500));
 

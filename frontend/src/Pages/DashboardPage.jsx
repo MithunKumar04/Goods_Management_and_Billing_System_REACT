@@ -33,12 +33,13 @@ const DashboardPage = () => {
 
   const fetchAndGenerateFilters = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/api/goods');
+      const res = await axios.get('https://goods-management-and-billing-system.onrender.com/api/history');
+      
       const products = res.data;
 
       if (products.length === 0) return;
 
-      const dates = products.map(p => new Date(p.createdAt));
+      const dates = products.map(p => new Date(p.timestamp)).filter(d => !isNaN(d));;
       const minDate = new Date(Math.min(...dates));
       const maxDate = new Date(Math.max(...dates));
 
@@ -49,11 +50,14 @@ const DashboardPage = () => {
     }
   };
 
-  const generateMonthYearOptions = (start, end) => {
+  const generateMonthYearOptions = (start, final) => {
     const options = [];
-    const current = new Date(start);
+    const current = new Date(start.getFullYear(), start.getMonth(), 1);
+    const end = new Date(final.getFullYear(), final.getMonth(), 1);
 
-    current.setDate(1);
+    console.log("Min Date:", start.toISOString());
+    console.log("Max Date:", final.toISOString());
+    console.log("Generated Options:", options);
 
     while (current <= end) {
       const option = format(current, 'yyyy-MM');
@@ -67,9 +71,9 @@ const DashboardPage = () => {
   const fetchDashboardData = async () => {
     try {
       const [productsRes, ordersRes, historyRes] = await Promise.all([
-        axios.get('http://localhost:3000/api/goods'),
-        axios.get('http://localhost:3000/api/orders'),
-        axios.get('http://localhost:3000/api/history'),
+        axios.get('https://goods-management-and-billing-system.onrender.com/api/goods'),
+        axios.get('https://goods-management-and-billing-system.onrender.com/api/orders'),
+        axios.get('https://goods-management-and-billing-system.onrender.com/api/history'),
       ]);
 
       const products = productsRes.data;

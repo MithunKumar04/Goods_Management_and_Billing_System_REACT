@@ -12,7 +12,7 @@ const HistoryPage = () => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/history');
+        const response = await axios.get('https://goods-management-and-billing-system.onrender.com/api/history');
         setHistoryItems(response.data);
         setLoading(false);
       } catch (error) {
@@ -24,9 +24,7 @@ const HistoryPage = () => {
     fetchHistory();
   }, []);
 
-  // Extract unique users
-  const uniqueUsers = Array.from(new Set(historyItems.map(item => item.user).filter(Boolean)));
-
+  
   // Filter history items based on selected filters
   const filteredItems = historyItems.filter(item => {
     const matchesType = filter === 'all' || item.type.toLowerCase() === filter.toLowerCase();
@@ -80,13 +78,7 @@ const HistoryPage = () => {
           </select>
         </div>
 
-        <div className="filter-controls">
-          <label>Filter by user:</label>
-          <select value={userFilter} onChange={(e) => setUserFilter(e.target.value)}>
-            <option value="all">All Users</option>
-            <option value="all">Mithun</option>
-          </select>
-        </div>
+      
 
         <div className="search-controls">
           <input
@@ -112,7 +104,6 @@ const HistoryPage = () => {
                     <span className="history-time">{new Date(item.timestamp).toLocaleTimeString()}</span>
                   </div>
                   <div className="history-detail">{item.detail}</div>
-                  <div className="history-user">By: <strong>{item.user || 'Mithun'}</strong></div>
                 </div>
               ))}
             </div>
