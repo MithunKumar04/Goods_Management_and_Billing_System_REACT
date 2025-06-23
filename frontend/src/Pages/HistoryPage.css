@@ -1,0 +1,130 @@
+.history-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .history-container h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .history-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .filter-controls, .search-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filter-controls label {
+    font-weight: 600;
+  }
+  
+  .filter-controls select, .search-controls input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .search-controls input {
+    min-width: 250px;
+  }
+  
+  .history-day-group {
+    margin-bottom: 30px;
+  }
+  
+  .history-date {
+    color: #444;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .history-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .history-item {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .history-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .history-time {
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  .history-detail {
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .badge-added {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .badge-updated {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .badge-order {
+    background-color: #cce5ff;
+    color: #004085;
+  }
+  
+  .badge-status {
+    background-color: #c5a3c3;
+    color: #9c4983;
+  }
+  
+  .loading, .no-results {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .history-controls {
+      flex-direction: column;
+    }
+    
+    .filter-controls, .search-controls {
+      width: 100%;
+    }
+    
+    .search-controls input {
+      width: 100%;
+    }
+  }

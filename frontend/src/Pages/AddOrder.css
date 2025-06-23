@@ -1,0 +1,113 @@
+/* Container for the entire add order section */
+.add-order-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+}
+
+/* Outer box for order form with a soft border */
+.order-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Header text */
+.order-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Preview of next order ID */
+.order-id-preview {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #888;
+  text-align: center;
+}
+
+/* Remove form border */
+.no-border-form {
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* Style for each input/select field */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4a90e2;
+}
+
+/* Buttons */
+button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #357abd;
+}
+
+/* Added order items display */
+.order-items {
+  margin-top: 20px;
+}
+
+.order-item {
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  background-color: #f0f4f8;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Total amount styling */
+.total-amount {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+  text-align: right;
+}

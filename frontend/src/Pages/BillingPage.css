@@ -1,0 +1,238 @@
+/* Main container for the billing page */
+.billing-container {
+    padding: 20px;
+  }
+  
+  /* Loading spinner */
+  .loading {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Orders table */
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .orders-table th, .orders-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+  }
+  
+  .orders-table th {
+    background-color: #f4f4f4;
+  }
+  
+  /* Status badge colors */
+  .status-badge {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .status-badge.pending {
+    background-color: #f0ad4e;
+  }
+  
+  .status-badge.processing {
+    background-color: #5bc0de;
+  }
+  
+  .status-badge.completed {
+    background-color: #5cb85c;
+  }
+  
+  .status-badge.rejected {
+    background-color: #d9534f;
+  }
+  
+  /* Invoice modal overlay */
+  .invoice-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Invoice modal content */
+  .invoice-modal-content {
+    background-color: #fff;
+    width: 90%;
+    max-width: 850px;
+    max-height: 90vh;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  /* Close button */
+  .close-modal-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .invoice-header {
+    text-align: center;
+  }
+  
+  .invoice-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .invoice-items-table th, .invoice-items-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .invoice-footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .total-label {
+    font-weight: bold;
+  }
+  
+  .total-amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9534f;
+  }
+  
+  /* Action Bar */
+  .action-bar {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .edit-mode-btn {
+    padding: 10px 20px;
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-mode-btn.active {
+    background-color: #5cb85c;
+  }
+  
+  /* Invoice Button */
+  .invoice-btn {
+    padding: 8px 16px;
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .save-btn {
+    padding: 8px 16px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* No Orders */
+  .no-orders {
+    text-align: center;
+    color: #999;
+  }
+  .quote-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  
+  .quote-title {
+    font-size: 32px;
+    color: #3366cc;
+    font-weight: bold;
+  }
+  
+  .quote-meta p {
+    margin: 4px 0;
+  }
+  
+  .company-info, .customer-info {
+    margin-top: 20px;
+  }
+  
+  .customer-info h4 {
+    background-color: #3366cc;
+    color: white;
+    padding: 5px 10px;
+  }
+  
+  .quote-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .quote-table th, .quote-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .quote-summary {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .quote-summary p {
+    margin: 2px 0;
+  }
+  
+  .quote-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .terms {
+    margin-top: 30px;
+  }
+  
+  .terms ol {
+    padding-left: 20px;
+  }
+  
+  .signature-line {
+    margin: 20px 0 10px;
+  }
+  .footer-note {
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .invoice-document {
+    width: 210mm; /* A4 width */
+    min-height: 297mm; /* A4 height */
+    padding: 20mm;
+    box-sizing: border-box;
+    background: white;
+    font-size: 12px;
+  }
+  
